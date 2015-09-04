@@ -2,10 +2,11 @@
 //  DBFMTests.swift
 //  DBFMTests
 //
-//  Created by lovefancy on 14-6-22.
-//  Copyright (c) 2014年 lovefancy. All rights reserved.
+//  Created by eko on 15/4/18.
+//  Copyright (c) 2015年 eko. All rights reserved.
 //
 
+import UIKit
 import XCTest
 
 class DBFMTests: XCTestCase {

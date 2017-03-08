@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		586032A10DC364CA9705D010 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 5860361AD42EA4D70C9D9C6D /* Cartfile */; };
 		5860332CEC9A8E91B81CDADE /* Channels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860368AF438D248B83C6FA7 /* Channels.swift */; };
 		586033462868349F695E4B84 /* HTTPUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 586036A80544609C13D14B50 /* HTTPUtil.swift */; };
 		586033D8E03464301D56FDC5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58603065720093A6CCC34271 /* LaunchScreen.xib */; };
@@ -56,7 +55,6 @@
 		586033E220421A4A5392AF55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		586034121A434F8625272260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5860359FD22B16C9E8FD0D04 /* ChannelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelController.swift; sourceTree = "<group>"; };
-		5860361AD42EA4D70C9D9C6D /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		5860365BA0DC820073AA97E2 /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		5860368AF438D248B83C6FA7 /* Channels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channels.swift; sourceTree = "<group>"; };
 		586036A80544609C13D14B50 /* HTTPUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPUtil.swift; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 				840304431D0018A100584DAD /* Alamofire.framework */,
 				7D88F6251AE272310087CD62 /* DBFM */,
 				7D88F6241AE272310087CD62 /* Products */,
-				5860361AD42EA4D70C9D9C6D /* Cartfile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -304,7 +301,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				586032A10DC364CA9705D010 /* Cartfile in Resources */,
 				586036B7E83038AB8CB1DE40 /* Assets.xcassets in Resources */,
 				586033D8E03464301D56FDC5 /* LaunchScreen.xib in Resources */,
 				58603A137DD2BB33A06503E7 /* Main.storyboard in Resources */,

@@ -40,7 +40,6 @@ class ChannelController: UIViewController {
         listener?.onChannelControllerChangeChannel(channel.channelId!)
         //关闭当前界面
         self.dismiss(animated: true, completion: nil)
-        self.
     }
 
     override func didReceiveMemoryWarning() {

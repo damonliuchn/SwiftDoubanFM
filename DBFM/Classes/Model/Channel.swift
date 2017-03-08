@@ -5,7 +5,7 @@ class Channel: Mappable {
     var name: String?
     var channelId: String?
 
-    required init?(_ map: Map) {
+    required init?(map: Map) {
 
     }
 

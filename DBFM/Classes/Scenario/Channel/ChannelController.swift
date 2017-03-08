@@ -2,7 +2,7 @@ import UIKit
 
 protocol ChannelControllerListener{
     //回调方法，将频道id传回到代理中
-    func onChannelControllerChangeChannel(channelId:String)
+    func onChannelControllerChangeChannel(_ channelId:String)
 }
 
 class ChannelController: UIViewController {
@@ -18,26 +18,29 @@ class ChannelController: UIViewController {
     }
 
     //配置tableview数据的行数
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return channels.count
     }
 
     //配置cell的数据
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var channel = channels[indexPath.row]
+    func tableView(_ tableView: UITableView, _  indexPath: IndexPath) -> UITableViewCell {
+        let channel = channels[(indexPath as NSIndexPath).row]
         //可选变量里的必存值 可以 转换为 普通变量
-        let cell = tv.dequeueReusableCellWithIdentifier("channel")! as UITableViewCell
+        let cell = tv.dequeueReusableCell(withIdentifier: "channel")! as UITableViewCell
         //设置cell的标题
         cell.textLabel?.text = "\(channel.name!)"
+        self.tableView(tableView,  indexPath)
         return cell
     }
 
+
     //选中了具体的频道
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var channel = channels[indexPath.row]
+    func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
+        let channel = channels[(indexPath as NSIndexPath).row]
         listener?.onChannelControllerChangeChannel(channel.channelId!)
         //关闭当前界面
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
+        self.
     }
 
     override func didReceiveMemoryWarning() {

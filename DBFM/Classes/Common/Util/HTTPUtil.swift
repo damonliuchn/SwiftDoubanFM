@@ -15,27 +15,43 @@ class HTTPUtil: NSObject {
 //            }
 //        }
 
-        Alamofire.request(.GET, url).responseString(completionHandler: {
+        Alamofire.request(url).responseJSON {
             response in
-            let channels = Mapper<Channels>().map(response.result.value)
-            delegate?.didRecieveChannels(channels!)
-        })
+            print("sss")
+            if let status = response.response?.statusCode {
+                if (status >= 200 && status < 300) {
+                    print("example success")
+                    //to get JSON return value
+                    if let result = response.result.value {
+                        let JSON = result as! String
+                        let channels = Mapper<Channels>().map(JSONString:JSON)
+                        delegate?.didRecieveChannels(channels!)
+                    }
+                } else {
+                    print("error with response status: \(status)")
+                }
+            }
+            //let channels = Mapper<Channels>().map(response.result.value)
+            //delegate?.didRecieveChannels(channels!)
+        }
     }
 
     func getSongs(url: String, delegate: HttpSongProtocol) {
-        Alamofire.request(.GET, url).responseString(completionHandler: {
+        Alamofire.request(url).responseJSON {
             response in
-            let songs = Mapper<Songs>().map(response.result.value)
-            delegate.didRecieveSongs(songs!)
-        })
+            //print(response.result.value)
+            //let songs = Mapper<Songs>().map(response.result.value)
+            //delegate.didRecieveSongs(songs!)
+        }
     }
+
 }
 
 //定义http协议
 
 protocol HttpChannelProtocol {
     //定义一个方法，接收一个参数：AnyObject
-    func didRecieveChannels(results: Channels)
+    func didRecieveChannels(_ results: Channels)
 }
 
 protocol HttpSongProtocol {

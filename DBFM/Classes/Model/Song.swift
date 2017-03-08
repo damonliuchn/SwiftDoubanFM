@@ -7,7 +7,7 @@ class Song: Mappable {
     var albumTitle: String?
     var url: String?
 
-    required init?(_ map: Map) {
+    required init?(map: Map) {
 
     }
 

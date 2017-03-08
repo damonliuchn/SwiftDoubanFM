@@ -11,13 +11,13 @@ class EkoImage: UIImageView {
 
         //边框
         self.layer.borderWidth = 4
-        self.layer.borderColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.7).CGColor
+        self.layer.borderColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.7).cgColor
     }
 
     //旋转
     func onRotation() {
         //动画实例关键字
-        var animation = CABasicAnimation(keyPath: "transform.rotation")
+        let animation = CABasicAnimation(keyPath: "transform.rotation")
         //初始值
         animation.fromValue = 0.0
         //结束值
@@ -26,7 +26,7 @@ class EkoImage: UIImageView {
         animation.duration = 20
         //动画重复次数
         animation.repeatCount = 10000
-        self.layer.addAnimation(animation, forKey: nil)
+        self.layer.add(animation, forKey: nil)
     }
 
 }

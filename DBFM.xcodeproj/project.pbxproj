@@ -20,7 +20,6 @@
 		58603CF3B2CA2AD0A95B7371 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58603D803B09D2C684E1C345 /* AppDelegate.swift */; };
 		58603D82AB09DFD5C2F2AD72 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58603056EFA79968E7C3C980 /* LaunchScreen.xib */; };
 		58603F775804F80ABF1BFAB2 /* ChannelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5860359FD22B16C9E8FD0D04 /* ChannelController.swift */; };
-		7D88F63F1AE272310087CD62 /* DBFMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D88F63E1AE272310087CD62 /* DBFMTests.swift */; };
 		843E2DAA1D001EF80084381A /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 840304431D0018A100584DAD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		843E2DAE1D0133F00084381A /* ObjectMapper.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 843E2DAD1D0133F00084381A /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		843E2DB01D01A9860084381A /* Kingfisher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 843E2DAF1D01A9860084381A /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -68,8 +67,6 @@
 		58603FEE17F5B02B5C7416BA /* EkoImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EkoImage.swift; sourceTree = "<group>"; };
 		7D88F6231AE272310087CD62 /* DBFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D88F6381AE272310087CD62 /* DBFMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DBFMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D88F63D1AE272310087CD62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7D88F63E1AE272310087CD62 /* DBFMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBFMTests.swift; sourceTree = "<group>"; };
 		840304431D0018A100584DAD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		843E2DAD1D0133F00084381A /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		843E2DAF1D01A9860084381A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -198,7 +195,6 @@
 				843E2DAD1D0133F00084381A /* ObjectMapper.framework */,
 				840304431D0018A100584DAD /* Alamofire.framework */,
 				7D88F6251AE272310087CD62 /* DBFM */,
-				7D88F63B1AE272310087CD62 /* DBFMTests */,
 				7D88F6241AE272310087CD62 /* Products */,
 				5860361AD42EA4D70C9D9C6D /* Cartfile */,
 			);
@@ -221,23 +217,6 @@
 				586030777CEB9762E8FA13DE /* Info.plist */,
 			);
 			path = DBFM;
-			sourceTree = "<group>";
-		};
-		7D88F63B1AE272310087CD62 /* DBFMTests */ = {
-			isa = PBXGroup;
-			children = (
-				7D88F63E1AE272310087CD62 /* DBFMTests.swift */,
-				7D88F63C1AE272310087CD62 /* Supporting Files */,
-			);
-			path = DBFMTests;
-			sourceTree = "<group>";
-		};
-		7D88F63C1AE272310087CD62 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7D88F63D1AE272310087CD62 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,9 +270,12 @@
 				TargetAttributes = {
 					7D88F6221AE272310087CD62 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = N68X733MXD;
+						LastSwiftMigration = 0800;
 					};
 					7D88F6371AE272310087CD62 = {
 						CreatedOnToolsVersion = 6.3;
+						LastSwiftMigration = 0800;
 						TestTargetID = 7D88F6221AE272310087CD62;
 					};
 				};
@@ -359,7 +341,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D88F63F1AE272310087CD62 /* DBFMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -485,6 +467,7 @@
 				INFOPLIST_FILE = DBFM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -492,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -499,6 +483,7 @@
 				INFOPLIST_FILE = DBFM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -517,6 +502,7 @@
 				INFOPLIST_FILE = DBFMTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DBFM.app/DBFM";
 			};
 			name = Debug;
@@ -532,6 +518,7 @@
 				INFOPLIST_FILE = DBFMTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DBFM.app/DBFM";
 			};
 			name = Release;

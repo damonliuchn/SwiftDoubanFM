@@ -4,7 +4,7 @@ import ObjectMapper
 class Channels: Mappable {
     var channels: [Channel] = []
 
-    required init?(_ map: Map) {
+    required init?(map: Map) {
 
     }
 

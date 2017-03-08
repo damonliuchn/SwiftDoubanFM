@@ -4,7 +4,7 @@ import ObjectMapper
 class Songs: Mappable {
     var songs: [Song] = []
 
-    required init?(_ map: Map) {
+    required init?(map: Map) {
 
     }
 

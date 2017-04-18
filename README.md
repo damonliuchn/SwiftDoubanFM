@@ -13,6 +13,6 @@ Swift iOS Project for Douban FM
 3、Alamofire、ObjectMapper、Kingfisher 第三方库的使用（使用Cartfile 引入 ）
 
 ------
-Blog:http://blog.csdn.net/masonblog
+Blog:http://www.masonliu.com
 
 Email:MasonLiuChn@gmail.com
